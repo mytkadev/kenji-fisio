@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo.svg"
+import logo from "../../assets/images/Logo.png"
 import { navItemsPTBR } from "../../constants";
 import { Menu, X } from 'lucide-react';
 import { useState } from "react";
