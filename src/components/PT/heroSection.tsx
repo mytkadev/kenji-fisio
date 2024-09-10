@@ -4,7 +4,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center mt-6 lg:mt-20 ">
             <div className="lg:px-96">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide mx-6 lg:mx-0 bg-gradient-to-r from-firstColor to-secondColor text-transparent bg-clip-text font-light"> {/* Queria que esse margin-x fosse aplicado só em dispositivos menores mas não deu certo */}
-                Pioneiro em fisioterapia para
+                FISIOTERAPIA
                 <span className="font-semibold">
                     {" "}
                     atletas de eSports
