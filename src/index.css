@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    min-width: 0;
+}
+
+body {
+    background: linear-gradient(38.16deg, rgba(0, 147, 61, 0.05) -1.4%, rgba(0, 114, 192, 0.05) 100%), #1e1e1e;
+}
+@keyframes autoRun {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+    }
+.animate-autoRun {
+  animation: autoRun 50s linear infinite;
+  display: flex;
+  white-space: nowrap;
+  animation-play-state: running;
+}
+
+.animate-autoRun:hover {
+  animation-play-state: paused;
+}
+
