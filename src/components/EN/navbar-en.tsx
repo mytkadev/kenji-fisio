@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo.svg"
+import logo from "../../assets/images/Logo.png"
 import { navItemsEN } from "../../constants";
 import { Menu, X } from 'lucide-react';
 import { useState } from "react";
@@ -60,6 +60,14 @@ const NavbarEN = () => {
                         ))}
                     </ul>
                     <div className="flex flex-col gap-4 items-center">
+                    <div>
+                        <Link to="/" className="px-4 py-2 text-sm font-medium border rounded-s-lg  border-gray-700 text-zinc-200 hover:text-white hover:bg-[#252525] dark:focus:text-white">
+                            PT-BR
+                        </Link>
+                        <Link to="/en" className="px-4 py-2 text-sm font-medium border rounded-e-lg   bg-[#1F2E25] border-firstColor text-zinc-100 hover:text-white hover:bg-[#1A3726]  dark:focus:text-white">
+                            EN
+                        </Link>
+                    </div>
                     <a href="#" className="bg-gradient-to-r from-firstColor to-secondColor py-2 px-4 rounded-md text-zinc-900 font-semibold w-fit flex justify-center">Contact me</a>
                     </div>
                 </div>
