@@ -11,7 +11,7 @@ const HeroSection = () => {
                 </span>
             </h1>
             </div>
-            <p className="mt-10 text-base md:text-lg text-center text-neutral-300 max-w-7xl mx-8 font-light">
+            <p className="mt-10 text-base md:text-lg text-center text-neutral-300 max-w-[95rem] mx-8 font-light">
             Com uma vasta experiência no mundo dos esportes eletrônicos, Vitor Kenji é o fisioterapeuta de referência para prevenção, tratamento de lesões e melhoria da performance de jogadores profissionais. Ele já trabalhou com os maiores times de eSports do Brasil, cuidando da saúde física de atletas que competem nos mais altos níveis.
             </p>
             <div className="flex mt-10 justify-center mx-10">
