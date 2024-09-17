@@ -8,7 +8,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center lg:h-svh max-h-[calc(100vh-3.0rem)]">
             <div className="w-full lg:h-5/6 box-border pb-6 md:pb-0">
             <div className="w-full flex flex-row justify-between h-full bg-gradient-to-r from-[#1e1e1e] to-transparent">
-                <div id="containerImagemTexto" className="w-full flex flex-row justify-between h-full  md:bg-kenji md:bg-no-repeat bg-right ">
+                <div id="containerImagemTexto" className="w-full flex flex-row justify-between h-full bg-kenji bg-no-repeat bg-right ">
                     <div id="texto" className="flex flex-col  pt-2 w-full md:w-4/5 md:bg-gradient-to-r from-[#1e1e1e] to-transparent md:pt-12 md:pl-12 md:pr-80 xl:pt-24 xl:pl-24 xl:w-5/6 xl:pr-[700px]">
                         <div id="textoPrincipal">
                             <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center lg:text-start tracking-wide mx-3 lg:mx-0 lg:px-0 bg-gradient-to-r from-firstColor to-secondColor text-transparent bg-clip-text font-normal">
