@@ -1,6 +1,6 @@
-import Navbar from '../components/PT/navbar'
-import HeroSection from '../components/PT/heroSection'
-import Teams from '../components/teams'
+import Navbar from '../components/PT/navbar-pt'
+import HeroSection from '../components/PT/heroSection-pt'
+import { AboutPT } from '../components/PT/about-pt'
 
 export function LandingPagePTBR() {
     return (
@@ -8,9 +8,7 @@ export function LandingPagePTBR() {
       <div className="">
         <Navbar />
         <HeroSection />
-        <Teams />
-        
-        
+        <AboutPT />
       </div>
       </>
     )

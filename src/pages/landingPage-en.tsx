@@ -8,7 +8,6 @@ export function LandingPageEN() {
       <div className="">
         <NavbarEN />
         <HeroSectionEN />
-        <Teams />
       </div>
       </>
     )

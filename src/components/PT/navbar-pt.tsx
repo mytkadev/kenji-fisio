@@ -34,15 +34,15 @@ const NavbarPTBR = () => {
                 </ul>
 
                 <div className="hidden lg:flex justify-center space-x-5 items-center">
-                    <div className="inline-flex rounded-md shadow-sm">
-                    <Link to="/" className="px-4 py-2 text-sm font-medium border rounded-s-lg  bg-[#1F2E25] border-firstColor text-zinc-100 hover:text-white hover:bg-[#1A3726] dark:focus:text-white">
+                    <div className="inline-flex rounded-md shadow-sm ">
+                    <Link to="/" className="px-4 py-2 text-sm font-medium  rounded-s-lg  bg-[#1F2E25] shadow-shape text-zinc-100 hover:text-white hover:bg-[#1A3726] dark:focus:text-white">
                         PT-BR
                     </Link>
-                    <Link to="/en" className="px-4 py-2 text-sm font-medium border rounded-e-lg border-gray-700 text-zinc-200 hover:text-white hover:bg-[#252525] dark:focus:text-white">
+                    <Link to="/en" className="shadow-shape px-4 py-2 text-sm font-medium  rounded-e-lg text-zinc-200 hover:text-white hover:bg-[#252525] dark:focus:text-white">
                         EN
                     </Link>
                     </div>
-                    <a href="#" className="bg-gradient-to-r from-firstColor to-secondColor py-2 px-4 rounded-md text-zinc-900 font-semibold w-24 flex justify-center">Contato</a>
+                    <a href="#" className="bg-gradient-to-r from-firstColor to-secondColor py-2 px-4 rounded-md text-zinc-900 font-semibold w-24 flex justify-center shadow-shape">Contato</a>
                 </div>
                 <div className="lg:hidden md:flex flex-col justify-end">
                     <button onClick={toggleNavbar}>
@@ -60,11 +60,11 @@ const NavbarPTBR = () => {
                         ))}
                     </ul>
                     <div className="flex flex-col gap-4 items-center">
-                    <div className="inline-flex rounded-md shadow-sm">
-                    <Link to="/" className="px-4 py-2 text-sm font-medium border rounded-s-lg focus:z-10  bg-[#1F2E25] border-firstColor text-zinc-100 hover:text-white hover:bg-[#1A3726] dark:focus:ring-blue-500 dark:focus:text-white">
+                    <div className="inline-flex rounded-md shadow-sm ">
+                    <Link to="/" className= " px-4 py-2 text-sm font-medium border rounded-s-lg focus:z-10  bg-[#1F2E25] border-firstColor text-zinc-100 hover:text-white hover:bg-[#1A3726] dark:focus:ring-blue-500 dark:focus:text-white">
                         PT-BR
                     </Link>
-                    <Link to="/en" className="px-4 py-2 text-sm font-medium border rounded-e-lg focus:z-10 focus:ring-2 border-gray-700 text-zinc-200 hover:text-white hover:bg-[#252525] dark:focus:text-white">
+                    <Link to="/en" className=" px-4 py-2 text-sm font-medium border rounded-e-lg focus:z-10 focus:ring-2 border-gray-700 text-zinc-200 hover:text-white hover:bg-[#252525] dark:focus:text-white">
                         EN
                     </Link>
                     </div>

@@ -11,9 +11,11 @@ const HeroSection = () => {
                 </span>
             </h1>
             </div>
-            <p className="mt-10 text-base md:text-lg text-center text-neutral-300 max-w-[95rem] mx-8 md:mx-28 font-light">
+            <p className="mt-6 text-base md:text-lg text-center text-neutral-300 max-w-[95rem] mx-8 md:mx-28 font-light">
             With vast experience in the world of electronic sports, Vitor Kenji is the go-to physiotherapist for injury prevention, treatment, and performance improvement of professional players. He has worked with the top eSports teams in Brazil, taking care of the physical health of athletes competing at the highest levels.
             </p>
+            <div>
+            <img src="../../assets/images/imagem-kenji.jpg" alt="" className="border border-zinc-200"/></div>
             <div className="flex mt-10 justify-center mx-10">
             </div>
         </div>
