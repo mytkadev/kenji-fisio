@@ -20,7 +20,7 @@ const NavbarPTBR = () => {
 
         <div className="px-6">
             <div className="flex justify-between items-center">
-            <div className="flex items-center flex-shrink-0 relative top-1 w-56">
+            <div className="flex items-center flex-shrink-0 relative top-1">
                 <img src={logo} alt="" className="mr-2 w-26 h-auto"/>
             </div>
                 <ul className="hidden lg:flex space-x-8 font-normal text-zinc-300">
