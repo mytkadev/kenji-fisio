@@ -5,7 +5,7 @@ import Linkedin from "../../assets/images/LinkedIn.png"
 
 const HeroSection = () => {
     return (
-        <div className="flex flex-col items-center lg:h-svh max-h-[calc(100vh-3.0rem)]">
+        <div className="flex flex-col items-center lg:h-svh max-h-100vh">
             <div className="w-full lg:h-5/6 box-border pb-6 md:pb-0">
             <div className="w-full flex flex-row justify-between h-full md:bg-gradient-to-r md:from-[#1e1e1e] md:to-transparent">
                 <div id="containerImagemTexto" className="w-full flex flex-row justify-between h-full  md:bg-kenji md:bg-no-repeat bg-right ">
@@ -24,16 +24,18 @@ const HeroSection = () => {
                             </p>
                         </div> 
                         <div className="flex flex-row justify-center md:justify-start mt-6">
-                        <div id="redesSociais-Insta" >
+                        <div id="redesSociais-Insta" className="bg-gradient-to-tr from-firstColor to-secondColor p-[0.06rem] rounded-full shadow-shape mr-2">
                             <a href="https://www.instagram.com/kenji_fisio/"  className="h-10 w-10 rounded-full bg-[#1e1e1e] flex items-center justify-center shadow-shape" target="__blank ">
                                 <img src={Instagram} alt="" className="p-2.5"/>
                             </a>
                         </div>
-                        <div id="redesSociais-Linkedin">
+                        <div id="redesSociais-Linkedin" className="bg-gradient-to-tr from-firstColor to-secondColor p-[0.06rem] rounded-full shadow-shape mr-4">
                             <a href="https://www.linkedin.com/in/kenjifisio/?originalSubdomain=br"  className="h-10 w-10 rounded-full bg-[#1e1e1e] p flex items-center justify-center shadow-shape" target="__blank">
                                 <img src={Linkedin} alt="" className="p-2.5"/>
                             </a>
                         </div>
+                        <div className="bg-gradient-to-tr from-firstColor to-secondColor p-[0.06rem] rounded-md shadow-shape">
+                        <a href="#" className="bg-[#1e1e1e] py-2 px-4 rounded-md text-zinc-50 font-medium w-24 flex justify-center shadow-shape">Contato</a></div>
                         </div>
                     </div>
 
