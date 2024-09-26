@@ -5,7 +5,7 @@ import Linkedin from "../../assets/images/LinkedIn.png"
 
 const HeroSection = () => {
     return (
-        <div className="flex flex-col items-center xl:h-[calc(100vh-4.5rem)] max-h-[1000px]">
+        <div className="flex flex-col items-center xl:h-[calc(100vh-4.5rem)] xl:min-h-[650px] max-h-[1000px]">
             <div className="w-full lg:h-5/6 box-border pb-6 lg:pb-0">
             <div className="w-full flex flex-row justify-between h-full">
                 <div id="containerImagemTexto" className="w-full flex flex-row justify-between h-full  lg:bg-kenji md:bg-no-repeat  lg:bg-[left_150%_bottom_90%] xl:bg-[right_0_bottom_80%]">
