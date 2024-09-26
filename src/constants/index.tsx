@@ -17,6 +17,9 @@ import logoRed from '../assets/images/logos/logo-red.svg';
 import logoTl from '../assets/images/logos/logo-tl.svg';
 import logoTropikaos from '../assets/images/logos/logo-tropikaos.svg';
 
+// import Sacy from '../assets/images/loud-sacy-valorant-masters-copenhagen 1.jpg'
+// import Fallen from '../assets/images/foto3 1.jpg'
+
 interface NavItemPTBR {
   label: string;
   href: string;
@@ -26,7 +29,7 @@ interface NavItemEN {
   href: string;
 }
 
-interface Testimonial {
+interface TestimonialPT {
   user: string;   team: string;
   image: string;
   text: string;
@@ -54,24 +57,18 @@ export const navItemsEN: NavItemEN [] = [
   { label: "Testimonials", href: "#" },
 ];
 
-export const testimonials: Testimonial[] = [
+export const testimonials: TestimonialPT[] = [
   {
     user: "Fallen",
-    team: "Stellar Solutions",
-    image: "user1",
-    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
-  },
-  {
-    user: "Robô",
-    team: "Blue Horizon Technologies",
-    image: 'user2',
-    text: "I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life.",
+    team: "Time1, Time2, Time3, Time4, Time5",
+    image: "",
+    text: "“É Kenjão, a coisa tá séria hoje em dia hein, pessoal tá se preparando, quem me dera a 18 anos atrás quando comecei, já tivesse profissionais como o Kenji de olho no esporte eletrônico. Valeu Kenji, obrigado pela força“",
   },
   {
     user: "Sacy",
-    team: "Quantum Innovations",
-    image: 'user3',
-    text: "Working with thi   team was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.",
+    team: "Time1, Time2, Time3, Time4, Time5",
+    image: "",
+    text: "“Quando estava na Turquia, o Kenji me ajudou, fez uma videocall comigo e depois fiquei colocando gelo três vezes por dia no pulso para aliviar a dor e jogar de boa [...] Pela upper final e final, a dor tava mais tranquila. Fui tratando, o Kenji foi me ajudando. Fiz alongamentos e exercícios e fui fortalecendo. Cheguei ontem a noite no Brasil e hoje de manhã já fui pro CT da LOUD, e o Kenji estava lá e fez um bagulho no meu braço que sumiu minha dor.”",
   },
 ];
 

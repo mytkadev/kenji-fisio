@@ -6,8 +6,33 @@
     min-width: 0;
 }
 
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 6px; /* Largura da barra de rolagem */
+}
+
+/* Estiliza a trilha da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Cor do fundo da trilha */
+    border-radius: 10px; /* Cantos arredondados */
+    border: 1px solid #363636; /* Borda com espaçamento ao redor */
+}
+
+/* Estiliza o polegar da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #363636; /* Cor do polegar */
+    border-radius: 10px; /* Cantos arredondados */
+    border: 1px solid #363636; /* Borda com espaçamento ao redor */
+}
+
+/* Opcional: mudança de cor ao hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a0a0a0; /* Cor ao passar o mouse */
+}
 body {
-    background: linear-gradient(38.16deg, rgba(0, 147, 61, 0.05) -1.4%, rgba(0, 114, 192, 0.05) 100%), #1e1e1e;
+    background: linear-gradient(38.16deg, rgba(0, 147, 61, 0.05) -1.4%, rgba(0, 114, 192, 0.05) 100%), #1e1e1e;body {
+
+      }
 }
 @keyframes autoRun {
     0% {
