@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { articlespt } from "../../constants";
+import { articlesen } from "../../constants"; // Trocado para articlesen
 
-// Defina uma interface para os itens de `articlespt`
+// Defina uma interface para os itens de `articlesen`
 interface Article {
   href: string;
   img: string;
@@ -15,7 +15,7 @@ interface ImageLoadedState {
   [key: number]: boolean; // Mapeia o índice (número) para um valor booleano
 }
 
-export function ArticlesPT() {
+export function ArticlesEN() { // Nome atualizado para ArticlesEN
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
   const [imageLoaded, setImageLoaded] = useState<ImageLoadedState>({});
@@ -24,7 +24,7 @@ export function ArticlesPT() {
 
   useEffect(() => {
     // Inicializa o estado de imagens carregadas para todos os itens
-    const initialImageLoadedState: ImageLoadedState = articlespt.reduce(
+    const initialImageLoadedState: ImageLoadedState = articlesen.reduce(
       (acc, _, index) => {
         acc[index] = false;
         return acc;
@@ -52,7 +52,7 @@ export function ArticlesPT() {
   }, []);
 
   const preloadNextPageImages = (pageIndex: number) => {
-    const nextItems = articlespt.slice(
+    const nextItems = articlesen.slice(
       pageIndex * itemsPerPage,
       (pageIndex + 1) * itemsPerPage
     );
@@ -86,7 +86,7 @@ export function ArticlesPT() {
 
   const handleNextPage = () => {
     const nextPage = currentPage + 1;
-    if (nextPage < Math.ceil(articlespt.length / itemsPerPage)) {
+    if (nextPage < Math.ceil(articlesen.length / itemsPerPage)) {
       preloadNextPageImages(nextPage);
       fadeOut(); // Inicia o fade-out
       setTimeout(() => {
@@ -114,7 +114,7 @@ export function ArticlesPT() {
     }
   };
 
-  const currentItems = articlespt.slice(
+  const currentItems = articlesen.slice(
     currentPage * itemsPerPage,
     (currentPage + 1) * itemsPerPage
   );
@@ -132,7 +132,7 @@ export function ArticlesPT() {
   return (
     <div id="section" className="p-">
       <h2 className="text-4xl pb-4 lg:py-8 xl:pt-0 xl:pb-10 sm:text-5xl lg:text-6xl text-center tracking-wide mx-3 lg:mx-0 lg:px-0 bg-gradient-to-r from-firstColor to-secondColor text-transparent bg-clip-text font-bold text-balance">
-        Matérias
+        Articles {/* Alterado para "Articles" */}
       </h2>
 
       {/* Grid responsivo com animação de transição */}
@@ -145,7 +145,7 @@ export function ArticlesPT() {
             href={item.href}
             target="_blank"
             key={index}
-            id="noticia"
+            id="article" // Alterado para "article"
             className="flex flex-row border-b-[1px] border-zinc-600/30 p-3 hover:bg-neutral-600/15"
           >
             {/* Esqueleto que aparece enquanto a imagem carrega */}
@@ -159,17 +159,17 @@ export function ArticlesPT() {
             <img
               src={item.img}
               alt={item.title}
-              id="imgnoticia"
+              id="imgarticle" // Alterado para "imgarticle"
               className={`bg-white h-28 min-w-44 max-w-44 rounded-md mr-3 object-cover shadow-shape border-[1px] border-neutral-800 ${
                 imageLoaded[index + currentPage * itemsPerPage] ? "block" : "hidden"
               }`}
               onLoad={() => handleImageLoad(index + currentPage * itemsPerPage)}
             />
 
-            <div id="tituloautor" className="flex flex-col text-[0.6rem]">
+            <div id="titleauthor" className="flex flex-col text-[0.6rem]"> {/* Alterado para "titleauthor" */}
               <h6
                 rel="noopener noreferrer"
-                id="titulo"
+                id="title"
                 className="leading-[15px] w-auto text-[0.8rem] font-medium tracking-wide text-white mb-2"
               >
                 {item.title}
@@ -181,7 +181,7 @@ export function ArticlesPT() {
                   className="max-h-2.5 mr-1"
                 />
                 <div id="authorname" className="text-zinc-300 font-extralight items-center ">
-                  • {item.authorName}
+                  • {item.authorName} | IN PORTUGUESE
                 </div>
               </div>
             </div>
@@ -227,20 +227,20 @@ export function ArticlesPT() {
             currentPage === 0 ? "text-zinc-500" : "text-zinc-300"
           }`}
         >
-          &lt; PÁGINA ANTERIOR
+          &lt; PREVIOUS PAGE {/* Alterado para "PREVIOUS PAGE" */}
         </button>
         <button
           onClick={handleNextPage}
           disabled={
-            currentPage === Math.ceil(articlespt.length / itemsPerPage) - 1
+            currentPage === Math.ceil(articlesen.length / itemsPerPage) - 1
           }
           className={`px-4 text-[0.7rem] ${
-            currentPage === Math.ceil(articlespt.length / itemsPerPage) - 1
+            currentPage === Math.ceil(articlesen.length / itemsPerPage) - 1
               ? "text-zinc-500"
               : "text-zinc-300"
           }`}
         >
-          PRÓXIMA PÁGINA &gt;
+          NEXT PAGE &gt; {/* Alterado para "NEXT PAGE" */}
         </button>
       </div>
     </div>

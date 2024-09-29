@@ -7,8 +7,8 @@ export function TestimonialsPT() {
             <h2 className="text-4xl pb-4 lg:py-8 xl:pt-0 xl:pb-10 sm:text-5xl lg:text-6xl text-center tracking-wide mx-3 lg:mx-0 lg:px-0 bg-gradient-to-r from-firstColor to-secondColor text-transparent bg-clip-text font-bold text-balance">
             O que os jogadores falam:
             </h2>
-            <div className="xl:flex xl:mx-10 2xl:mx-20 ">
-                <div className="relative mt-3 mb-5 mx-6 sm:max-h-80 lg:w-[1000px] lg:mx-auto xl:mr-5 2xl:mr-10">
+            <div className="xl:flex mx-8 xl:mx-32 ">
+                <div className="relative mt-3 mb-5 sm:max-h-80 lg:w-[1000px] lg:mx-auto xl:mr-5 2xl:mr-10 ">
                     <div className="relative rounded-[24px] shadow-shape">
                         <img 
                         src={Sacy} 
@@ -32,7 +32,7 @@ export function TestimonialsPT() {
                         </p>
                     </div>
                 </div>
-                <div className="relative mt-3 mb-5 mx-6 sm:max-h-80 lg:w-[1000px] lg:mx-auto">
+                <div className="relative mt-3 mb-5 sm:max-h-80 lg:w-[1000px] lg:mx-auto">
                     <div className="relative rounded-[24px] shadow-shape">
                         <img 
                         src={Fallen} 
