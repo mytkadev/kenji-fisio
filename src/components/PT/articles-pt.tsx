@@ -220,28 +220,26 @@ export function ArticlesPT() {
       </div>
 
       <div className="mb-5 mt-3 flex justify-between px-6 md:px-8 xl:px-32">
-        <button
-          onClick={handlePreviousPage}
-          disabled={currentPage === 0}
-          className={`px-4 text-[0.7rem] ${
-            currentPage === 0 ? "text-zinc-500" : "text-zinc-300"
-          }`}
-        >
-          &lt; PÁGINA ANTERIOR
-        </button>
-        <button
-          onClick={handleNextPage}
-          disabled={
-            currentPage === Math.ceil(articlespt.length / itemsPerPage) - 1
-          }
-          className={`px-4 text-[0.7rem] ${
-            currentPage === Math.ceil(articlespt.length / itemsPerPage) - 1
-              ? "text-zinc-500"
-              : "text-zinc-300"
-          }`}
-        >
-          PRÓXIMA PÁGINA &gt;
-        </button>
+      <button
+  onClick={handlePreviousPage}
+  disabled={currentPage === 0 || isTransitioning} // Desativa se estiver em transição
+  className={`px-4 text-[0.7rem] ${
+    currentPage === 0 ? "text-zinc-500" : "text-zinc-300"
+  }`}
+>
+  &lt; PÁGINA ANTERIOR
+</button>
+<button
+  onClick={handleNextPage}
+  disabled={currentPage === Math.ceil(articlespt.length / itemsPerPage) - 1 || isTransitioning} // Desativa se estiver em transição
+  className={`px-4 text-[0.7rem] ${
+    currentPage === Math.ceil(articlespt.length / itemsPerPage) - 1
+      ? "text-zinc-500"
+      : "text-zinc-300"
+  }`}
+>
+  PRÓXIMA PÁGINA &gt;
+</button>
       </div>
     </div>
   );
