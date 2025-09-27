@@ -1,13 +1,14 @@
 import { podcastPT } from "../../constants";
 import { useState, useEffect } from "react";
-import flowgames from "../../assets/images/authors/flowgames.jpg"
+import flowgames from "../../assets/images/authors/flowgames.jpg";
 
 export function PodcastsPT() {
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3); // Inicialmente 3 para mobile
-  const [isTransitioning, setIsTransitioning] = useState(false); // Estado para controlar a transição de página
   const [hideFirstItem, setHideFirstItem] = useState(false); // Estado para esconder o primeiro item
   const [isLargeScreen, setIsLargeScreen] = useState(false); // Estado para monitorar telas a partir de 1024px
+  const [opacity, setOpacity] = useState(1); // Controla a opacidade do componente
+  const [isTransitioning, setIsTransitioning] = useState(false); // Controla a transição de opacidade
 
   // Função que ajusta o número de itens por página conforme o tamanho da tela
   const updateItemsPerPage = () => {
@@ -34,23 +35,44 @@ export function PodcastsPT() {
     return () => window.removeEventListener("resize", updateItemsPerPage); // Limpa o evento ao desmontar
   }, []);
 
+  // Função para iniciar o fade-out
+  const fadeOut = () => {
+    setIsTransitioning(true);
+    setOpacity(0);
+  };
+
+  // Função para iniciar o fade-in
+  const fadeIn = () => {
+    setIsTransitioning(true);
+    setOpacity(0.3);
+    requestAnimationFrame(() => {
+      setOpacity(1); // Faz a animação de opacidade gradualmente
+    });
+  };
+
   const handleNextPage = () => {
     if (currentPage < Math.ceil(podcastPT.length / itemsPerPage) - 1) {
-      setIsTransitioning(true);
+      fadeOut(); // Inicia o fade-out
       setTimeout(() => {
-        setCurrentPage(currentPage + 1);
-        setIsTransitioning(false);
-      }, 300); // 300ms de duração para a transição
+        setCurrentPage(currentPage + 1); // Muda para a próxima página
+        fadeIn(); // Inicia o fade-in
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 300);
+      }, 300); // Tempo de fade-out
     }
   };
 
   const handlePreviousPage = () => {
     if (currentPage > 0) {
-      setIsTransitioning(true);
+      fadeOut(); // Inicia o fade-out
       setTimeout(() => {
-        setCurrentPage(currentPage - 1);
-        setIsTransitioning(false);
-      }, 300); // 300ms de duração para a transição
+        setCurrentPage(currentPage - 1); // Muda para a página anterior
+        fadeIn(); // Inicia o fade-in
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 300);
+      }, 300); // Tempo de fade-out
     }
   };
 
@@ -66,14 +88,14 @@ export function PodcastsPT() {
   const firstItem = podcastPT[0];
 
   return (
-    <div className="w-full flex flex-col xl:mb-8 items-center ">
+    <div className="w-full flex flex-col items-center xl:h-[90vh] ">
       <h2 className="text-4xl pb-4 lg:py-8 xl:pt-0 xl:pb-10 sm:text-5xl lg:text-6xl text-center tracking-wide mx-3 lg:mx-0 lg:px-0 bg-gradient-to-r from-firstColor to-secondColor text-transparent bg-clip-text font-bold text-balance">
         Podcasts
       </h2>
 
       {/* Layout para telas grandes */}
       {isLargeScreen ? (
-        <div id="alturatotaldaqui" className="flex flex-col lg:flex-row w-full max-w-[90rem] mx-auto justify-center">
+        <div id="alturatotaldaqui" className="flex flex-col lg:flex-row w-full max-w-[90rem] mx-auto justify-center max-h-[80vh] ">
           {/* Vídeo incorporado */}
           <div className="w-full lg:w-3/5 flex flex-col justify-start items-start pr-4 pt-3 mb-8 lg:mb-0">
             <iframe
@@ -85,20 +107,20 @@ export function PodcastsPT() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              className="w-full h-[400px] xl:h-[500px] rounded-lg shadow-lg mb-5"
+              className="w-full h-[60vh] rounded-lg shadow-lg mb-5"
             ></iframe>
             {/* Título e Autor do Vídeo Incorporado */}
             <div className="flex flex-row">
               <img src={flowgames} alt="" className="h-16 w-16 min-h-16 min-w-16 rounded-full" />
-            <div className="text-white px-4">
-              <h3 className="text-2xl font-bold mb-0">{firstItem.title}</h3>
-              <p className="text-base text-zinc-300">{firstItem.authorName}</p>
-            </div>
+              <div className="text-white px-4">
+                <h3 className="text-2xl font-bold mb-0">{firstItem.title}</h3>
+                <p className="text-base text-zinc-300">{firstItem.authorName}</p>
+              </div>
             </div>
           </div>
 
           {/* Lista de Podcasts com Scroll Próprio */}
-          <div className="w-full lg:w-1/5 h-[520px] xl:h-[580px] overflow-y-scroll px-4 border-l border-neutral-700/50">
+          <div className="w-full lg:w-1/5 h-[70vh] max-h-[80vh] overflow-y-scroll px-4 border-l border-neutral-700/50">
             {currentItems.map((item, index) => (
               <a
                 href={item.href}
@@ -131,9 +153,8 @@ export function PodcastsPT() {
         // Layout para dispositivos menores e médios (padrão original)
         <>
           <div
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 px-6 md:px-8 xl:px-32 transition-opacity duration-[300ms] ease-in-out ${
-              isTransitioning ? "transform -translate-x-full opacity-0" : "transform translate-x-0 opacity-100"
-            }`}
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 px-6 md:px-8 xl:px-32 transition-opacity duration-[300ms] ease-in-out`}
+            style={{ opacity: opacity }} // Controle da opacidade com estado
           >
             {/* Renderizar os itens atuais */}
             {currentItems.map((item, index) => (
@@ -188,14 +209,14 @@ export function PodcastsPT() {
           <div className="mb-5 mt-3 flex justify-between px-6 w-full md:px-8 xl:px-32">
             <button
               onClick={handlePreviousPage}
-              disabled={currentPage === 0}
+              disabled={currentPage === 0 || isTransitioning} // Desativa se estiver em transição
               className={`px-4 text-[0.7rem] ${currentPage === 0 ? "text-zinc-500" : "text-zinc-300"}`}
             >
               &lt; PÁGINA ANTERIOR
             </button>
             <button
               onClick={handleNextPage}
-              disabled={currentPage === Math.ceil(podcastPT.length / itemsPerPage) - 1}
+              disabled={currentPage === Math.ceil(podcastPT.length / itemsPerPage) - 1 || isTransitioning} // Desativa se estiver em transição
               className={`px-4 text-[0.7rem] ${
                 currentPage === Math.ceil(podcastPT.length / itemsPerPage) - 1 ? "text-zinc-500" : "text-zinc-300"
               }`}

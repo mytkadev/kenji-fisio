@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { teams } from '../constants/index';
+console.log(teams)
 
 const Teams = () => {
   // Permite que hoveredIndex seja null ou um número (índice)
@@ -21,7 +22,8 @@ const Teams = () => {
                 <div className="flex justify-center items-center text-center">
                   <div className="absolute scale-0 text-sm bg-gradient-to-r from-firstColor to-secondColor p-[0.05rem] rounded-md group-hover:scale-100 bottom-[53px] transition-transform">
                     <div className="bg-[#1e1e1e] px-2 py-0.5 rounded-md">
-                      <p>{item.name} | {item.start} - {item.end}</p>
+                      <p>{item.name}
+                      </p>
                     </div>
                   </div>
                   <img src={item.logo} alt={item.name} className="h-12 inline-block" />

@@ -11,7 +11,7 @@ const HeroSection = () => {
                 <div id="containerImagemTexto" className="w-full flex flex-row justify-between h-full  lg:bg-kenji md:bg-no-repeat  lg:bg-[left_150%_bottom_90%] xl:bg-[right_0_bottom_80%] min-h-fit">
                     <div id="texto" className="flex flex-col  pt-6 w-full lg:w-2/4 md:px-6 lg:p-12 lg:pl-12  2xl:pt-24 2xl:pl-24 2xl:w-5/6 2xl:pr-[700px] text-balance">
                         <div id="textoPrincipal">
-                            <h1 className="text-5xl sm:text-6xl lg:text-8xl xl:text-7xl text-center lg:text-start tracking-wide mx-3 lg:mx-0 lg:px-0 bg-gradient-to-r from-firstColor to-secondColor text-transparent bg-clip-text font-normal">
+                            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-7xl text-center lg:text-start tracking-wide mx-3 lg:mx-0 lg:px-0 bg-gradient-to-r from-firstColor to-secondColor text-transparent bg-clip-text font-normal">
                                 Fisioterapeuta para 
                                 <span className="font-extrabold">
                                     {" "} atletas de eSports
@@ -20,7 +20,7 @@ const HeroSection = () => {
                         </div>
                         <div id="textoSecundario">
                             <p className="mt-5 lg:mt-6 text-base lg:text-lg text-center lg:text-start text-neutral-300 max-w-[95rem] mx-8 lg:mx-0 font-light">
-                                Com uma vasta experiência no mundo dos esportes eletrônicos, Vitor Kenji é o fisioterapeuta de referência para prevenção, tratamento de lesões e melhoria da performance de jogadores profissionais. Ele já trabalhou com os maiores times de eSports do Brasil, cuidando da saúde física de atletas que competem nos mais altos níveis.
+                                Com uma vasta experiência no mundo dos esportes eletrônicos, Vitor Kenji é o fisioterapeuta de referência para tratamento de lesões e melhoria da performance de jogadores profissionais. Ele já trabalhou com os maiores times de eSports do Brasil, cuidando da saúde física de atletas que competem nos mais altos níveis.
                             </p>
                         </div> 
                         <div className="flex flex-row justify-center lg:justify-start mt-6 pb-5">

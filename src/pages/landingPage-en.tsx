@@ -5,6 +5,7 @@ import { AboutEN } from '../components/EN/about-en'
 import { ResearchEN } from '../components/EN/research-en'
 import { TestimonialsEN } from '../components/EN/testimonials-en'
 import { ContactEN } from '../components/EN/contact-en'
+import { PodcastsEN } from '../components/EN/podcasts-en'
 
 export function LandingPageEN() {
     return (
@@ -15,7 +16,7 @@ export function LandingPageEN() {
         <AboutEN />
         <ArticlesEN />
         <ResearchEN />
-        <p>podcasts</p>
+        <PodcastsEN />
         <TestimonialsEN />
         <ContactEN />
       </div>
