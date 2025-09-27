@@ -35,7 +35,7 @@ const HeroSection = () => {
                             </a>
                         </div>
                         <div className="bg-gradient-to-tr from-firstColor to-secondColor p-[0.06rem] rounded-md shadow-shape">
-                        <a href="#" className="bg-[#1e1e1e] py-2 px-4 rounded-md text-zinc-50 font-medium w-24 flex justify-center shadow-shape  hover:bg-zinc-800">Contato</a></div>
+                        <a href="#contact" className="bg-[#1e1e1e] py-2 px-4 rounded-md text-zinc-50 font-medium w-24 flex justify-center shadow-shape  hover:bg-zinc-800">Contato</a></div>
                         </div>
                     </div>
 

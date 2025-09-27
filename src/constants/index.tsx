@@ -106,19 +106,21 @@ interface ArticlesPT {
 }
 
 export const navItemsPTBR: NavItemPTBR[] = [
-  { label: "Sobre", href: "#" },
-  { label: "Matérias", href: "#" },
-  { label: "Artigos", href: "#" },
-  { label: "Podcasts", href: "#" },
-  { label: "Depoimentos", href: "#" },
+  { label: "Sobre", href: "#about" },
+  { label: "Matérias", href: "#articles" },
+  { label: "Artigos", href: "#research" },
+  { label: "Podcasts", href: "#podcasts" },
+  { label: "Depoimentos", href: "#testimonials" },
+  { label: "Contato", href: "#contact" },
 ];
 
-export const navItemsEN: NavItemEN [] = [
-  { label: "About", href: "#" },
-  { label: "Articles", href: "#" },
-  { label: "Science", href: "#" },
-  { label: "Podcasts", href: "#" },
-  { label: "Testimonials", href: "#" },
+export const navItemsEN: NavItemEN[] = [
+  { label: "About", href: "#about" },
+  { label: "Press", href: "#articles" },
+  { label: "Articles", href: "#research" },
+  { label: "Podcasts", href: "#podcasts" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const teams: Teams[] = [

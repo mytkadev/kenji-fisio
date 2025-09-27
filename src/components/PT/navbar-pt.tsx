@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 const NavbarPTBR = () => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
+    const handleNavClick = () => setMobileDrawerOpen(false);
+
     const toggleNavbar = () => {
         setMobileDrawerOpen(!mobileDrawerOpen);
     };
@@ -48,7 +50,7 @@ const NavbarPTBR = () => {
                     <ul className="hidden lg:flex space-x-8 font-normal text-zinc-300">
                         {navItemsPTBR.map((item, index) => (
                             <li key={index}>
-                                <a href={item.href} className="hover:text-zinc-50 group relative transition-colors duration-[400ms] py-1.5 px-0.5">
+                                <a href={item.href} onClick={handleNavClick} className="hover:text-zinc-50 group relative transition-colors duration-[400ms] py-1.5 px-0.5">
                                     {item.label}
                                     <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-firstColor transition-all delay-75 duration-100 group-hover:w-full"/>
                                 </a>
@@ -93,7 +95,7 @@ const NavbarPTBR = () => {
                             )}
                         </div>
 
-                        <a href="#" className="bg-gradient-to-r from-firstColor to-secondColor py-2 px-4 rounded-md text-zinc-900 font-semibold w-32 flex justify-center shadow-shape ml-5">
+                        <a href="#contact" onClick={handleNavClick} className="bg-gradient-to-r from-firstColor to-secondColor py-2 px-4 rounded-md text-zinc-900 font-semibold w-32 flex justify-center shadow-shape ml-5">
                             Contato
                         </a>
                     </div>
@@ -112,7 +114,7 @@ const NavbarPTBR = () => {
                         <ul className="w-full">
                             {navItemsPTBR.map((item, index) => (
                                 <li key={index} className="text-lg border-b border-neutral-700/30 py-2.5">
-                                    <a href={item.href} className="font-normal text-zinc-300">
+                                    <a href={item.href} onClick={handleNavClick} className="font-normal text-zinc-300">
                                         {item.label}
                                     </a>
                                 </li>
@@ -153,7 +155,7 @@ const NavbarPTBR = () => {
                             )}
                         </div>
 
-                            <a href="#" className="bg-gradient-to-r from-firstColor to-secondColor py-2 px-4 rounded-md text-zinc-900 font-semibold w-fit flex justify-center">
+                            <a href="#contact" onClick={handleNavClick} className="bg-gradient-to-r from-firstColor to-secondColor py-2 px-4 rounded-md text-zinc-900 font-semibold w-fit flex justify-center">
                                 Entrar em contato
                             </a>
                         </div>

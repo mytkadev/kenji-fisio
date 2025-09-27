@@ -13,13 +13,27 @@ export function LandingPagePTBR() {
       <>
       <div className="">
         <Navbar />
+        <section id="home">
         <HeroSection />
+        </section>
+        <section id="about">
         <AboutPT />
+        </section>
+        <section id="articles">
         <ArticlesPT />
+        </section>
+        <section id="research">
         <ResearchPT />
+        </section>
+        <section id="podcasts">
         <PodcastsPT />
+        </section>
+        <section id="testimonials">
         <TestimonialsPT />
+        </section>
+        <section id="contact">
         <ContactPT />
+        </section>
       </div>
       </>
     )
