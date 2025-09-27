@@ -16,7 +16,9 @@ import logoPrg from '../assets/images/logos/logo-prg.svg';
 import logoRed from '../assets/images/logos/logo-red.svg';
 import logoTl from '../assets/images/logos/logo-tl.svg';
 import logoTropikaos from '../assets/images/logos/logo-tropikaos.svg';
-import logoTBS from '../assets/images/logos/logo-tbs.png'
+import logoTBS from '../assets/images/logos/logo-tbs.png';
+import logoC9 from '../assets/images/logos/logo-c9.png';
+import logo100t from '../assets/images/logos/logo-100t.png';
 
 // import Sacy from '../assets/images/loud-sacy-valorant-masters-copenhagen 1.jpg'
 // import Fallen from '../assets/images/foto3 1.jpg'
@@ -173,6 +175,16 @@ export const teams: Teams[] = [
     name: "Imperial",
     start: "2022",
     end: 2014,
+  },
+    { logo: logoC9, 
+    name: "Cloud9",
+    start: "2024",
+    end: 2012,
+  },
+    { logo: logo100t, 
+    name: "100 Thieves",
+    start: "2024",
+    end: 2012,
   },
   { logo: logoIntz, 
     name: "INTZ",

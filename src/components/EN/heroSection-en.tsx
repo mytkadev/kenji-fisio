@@ -5,10 +5,26 @@ import Linkedin from "../../assets/images/LinkedIn.png"
 const HeroSection = () => {
     return (
         <div className="flex flex-col items-center lg:h-svh max-h-100vh">
-            <div className="w-full lg:h-5/6 box-border pb-6 md:pb-0">
+            <div className="w-full lg:h-5/6 box-border pb-6 lg:pb-0">
             <div className="w-full flex flex-row justify-between h-full">
-                <div id="containerImagemTexto" className="w-full flex flex-row justify-between h-full  lg:bg-kenji md:bg-no-repeat bg-right ">
-                    <div id="texto" className="flex flex-col  pt-6 w-full lg:w-4/5 lg:pt-12 lg:pl-12 lg:pr-80 2xl:pt-24 2xl:pl-24 2xl:w-5/6 2xl:pr-[700px]">
+                <div
+  id="containerImagemTexto"
+  className="
+    w-full flex justify-between h-full
+    lg:bg-kenji md:bg-no-repeat
+    bg-[left_150%_bottom_90%] xl:bg-[right_0_bottom_80%]
+    min-h-fit
+  "
+>
+
+                    <div
+  id="texto"
+  className="
+    flex flex-col
+    lg:pl-12
+    2xl:pt-24 2xl:pl-24 2xl:w-5/6 2xl:pr-[700px]
+  "
+>
                         <div id="textoPrincipal">
                             <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center lg:text-start tracking-wide mx-3 lg:mx-0 lg:px-0 bg-gradient-to-r from-firstColor to-secondColor text-transparent bg-clip-text font-normal">
                             Physiotherapist for
