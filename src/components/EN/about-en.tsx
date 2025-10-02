@@ -18,12 +18,7 @@ export function AboutEN() {
             </h2>
             <img src={AboutImage} alt="" className="md:hidden mb-8 " />
             <p>
-              The physiotherapist Vitor Kenji graduated in 2009 from UNINOVE -
-              Universidade Nove de Julho. From 2009 to 2016, he worked in two
-              clinics, specializing in massage therapy, acupuncture,
-              chiropractic, sports and orthopedic rehabilitation. In 2016, he
-              created a physiotherapy project to present to e-sports teams in
-              Brazil.
+              Vitor Kenji is a physiotherapist, graduated from UNINOVE – Universidade Nove de Julho. From 2009 to 2016, he worked in two clinics, practicing massage therapy, acupuncture, chiropractic, and sports rehabilitation.
             </p>
             <br></br>
             <p>
@@ -33,11 +28,6 @@ export function AboutEN() {
               (tendinopathies), and performance enhancement.
             </p>
             <br></br>
-            <p>
-              Physiotherapy allows e-sports athletes to maintain high
-              performance while preserving long-term health and well-being,
-              making competitions healthier and more sustainable!
-            </p>
           </div>
         </div>
       </div>

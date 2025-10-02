@@ -10,7 +10,7 @@ const Teams = () => {
     <div className="w-full h-24 flex items-end overflow-x-hidden">
       <div className="bg-gradient-to-r from-firstColor to-secondColor w-full h-20 flex items-center justify-center text-center shadow-shape">
         <div className="bg-[#1e1e1e] h-[calc(5rem-2px)] w-full relative flex items-center">
-          <ul className="flex w-full animate-autoRun whitespace-nowrap">
+          <ul className="flex w-full animate-[autoRun_12s_linear_infinite] whitespace-nowrap">
             {teams.concat(teams).map((item, index) => (
               <li
                 key={index}
