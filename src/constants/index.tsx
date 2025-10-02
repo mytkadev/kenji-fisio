@@ -17,8 +17,8 @@ import logoRed from '../assets/images/logos/logo-red.svg';
 import logoTl from '../assets/images/logos/logo-tl.svg';
 import logoTropikaos from '../assets/images/logos/logo-tropikaos.svg';
 import logoTBS from '../assets/images/logos/logo-tbs.png';
-import logoC9 from '../assets/images/logos/logo-c9.png';
-import logo100t from '../assets/images/logos/logo-100t.png';
+import logoC9 from '../assets/images/logos/logo-c9.svg';
+import logo100t from '../assets/images/logos/logo-100t.svg';
 
 // import Sacy from '../assets/images/loud-sacy-valorant-masters-copenhagen 1.jpg'
 // import Fallen from '../assets/images/foto3 1.jpg'
