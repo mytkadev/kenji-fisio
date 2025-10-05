@@ -11,7 +11,7 @@ const Teams = () => {
             {teams.concat(teams).map((item, index) => (
               <li
                 key={index}
-                className="group relative flex items-center justify-center mx-2.5 md:mx-6"
+                className="group relative flex items-center justify-center mx-2.5 md:mx-4"
               >
                 <img
                   src={item.logo}
