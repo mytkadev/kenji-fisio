@@ -18,21 +18,14 @@ interface ImageLoadedState {
 export function ArticlesEN() { // Nome atualizado para ArticlesEN
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
-  const [imageLoaded, setImageLoaded] = useState<ImageLoadedState>({});
+  const [imageLoaded, setImageLoaded] = useState<ImageLoadedState>(() =>
+    articlesen.reduce((acc, _, index) => {
+      acc[index] = false;
+      return acc;
+    }, {} as ImageLoadedState)
+  );
   const [isTransitioning, setIsTransitioning] = useState(false); // Controla a animação de transição
   const [opacity, setOpacity] = useState(1); // Controla a opacidade do componente
-
-  useEffect(() => {
-    // Inicializa o estado de imagens carregadas para todos os itens
-    const initialImageLoadedState: ImageLoadedState = articlesen.reduce(
-      (acc, _, index) => {
-        acc[index] = false;
-        return acc;
-      },
-      {} as ImageLoadedState
-    );
-    setImageLoaded(initialImageLoadedState);
-  }, []);
 
   const updateItemsPerPage = () => {
     const width = window.innerWidth;
@@ -68,6 +61,10 @@ export function ArticlesEN() { // Nome atualizado para ArticlesEN
       };
     });
   };
+
+  useEffect(() => {
+    preloadNextPageImages(currentPage);
+  }, [currentPage, itemsPerPage]);
 
   // Função para iniciar o fade-out
   const fadeOut = () => {
