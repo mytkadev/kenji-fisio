@@ -21,7 +21,7 @@ export function TestimonialsPT() {
                         <h2 className="text-3xl font-bold mb-2">Sacy</h2>
                     </div>
                     <div className="absolute top-0 p-6 right-0 px-4 py-6">
-                            <a href="https://www.youtube.com/watch?v=92UUWbe2LyQ" target="_blank" className="bg-zinc-800/70 text-gray-50  border font-semibold px-4 py-2 rounded-lg">Assistir depoimento</a>
+                            <a href="https://www.youtube.com/watch?v=92UUWbe2LyQ" target="_blank" rel="noopener noreferrer" className="bg-zinc-800/70 text-gray-50  border font-semibold px-4 py-2 rounded-lg">Assistir depoimento</a>
                         </div>
 
                     <div className="absolute bottom-0 p-6 inset-x-0 text-white">
@@ -45,7 +45,7 @@ export function TestimonialsPT() {
                         <h2 className="text-3xl font-bold mb-2">Fallen</h2>
                     </div>
                     <div className="absolute top-0 p-6 right-0 px-4 py-6">
-                            <a href="https://www.instagram.com/reel/ChxH7TlDIbf/" target="_blank"  >
+                            <a href="https://www.instagram.com/reel/ChxH7TlDIbf/" target="_blank" rel="noopener noreferrer"  >
                             <div className="leading-[18px] bg-zinc-800/70 text-gray-50  border font-medium px-4 py-2 rounded-lg">Assistir exercícios <br /> 
                             feitos com o Fallen </div></a>
                         </div>

@@ -23,7 +23,7 @@ export function TestimonialsEN() { // Alterado de `TestimonialsPT` para `Testimo
           <div className="absolute top-0 p-6 right-0 px-4 py-6">
             <a
               href="https://www.youtube.com/watch?v=92UUWbe2LyQ"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               className=""
             >
               <div className="leading-[16px] bg-zinc-800/70 text-gray-50 border font-medium px-4 py-2 rounded-lg text-center">
@@ -60,7 +60,7 @@ export function TestimonialsEN() { // Alterado de `TestimonialsPT` para `Testimo
           <div className="absolute top-0 p-6 right-0 px-4 py-6">
             <a
               href="https://www.instagram.com/reel/ChxH7TlDIbf/"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
               <div className="leading-[18px] bg-zinc-800/70 text-gray-50 border font-medium px-4 py-2 rounded-lg text-center">
                 Watch exercises <br /> with Fallen

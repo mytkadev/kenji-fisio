@@ -143,7 +143,7 @@ export function ArticlesEN() { // Nome atualizado para ArticlesEN
         {currentItems.map((item: Article, index: number) => (
           <a
             href={item.href}
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             key={index}
             id="article" // Alterado para "article"
             className="flex flex-row border-b-[1px] border-zinc-600/30 p-3 hover:bg-neutral-600/15"
