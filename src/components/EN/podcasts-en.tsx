@@ -124,7 +124,7 @@ export function PodcastsEN() {
             {currentItems.map((item, index) => (
               <a
                 href={item.href}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 key={index}
                 id="podcast"
                 className="flex flex-col border-b-[1px] border-zinc-600/30 p-3 hover:bg-neutral-600/15 w-full"
@@ -160,7 +160,7 @@ export function PodcastsEN() {
             {currentItems.map((item, index) => (
               <a
                 href={item.href}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 key={index}
                 id="podcast"
                 className="flex flex-col border-b-[1px] border-zinc-600/30 p-3 hover:bg-neutral-600/15 md:w-80 md:mx-auto"
